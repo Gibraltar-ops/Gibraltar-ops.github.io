@@ -834,3 +834,22 @@ a.logo {
     background-color: #262626;
     border-bottom: 1px solid #333;
 }
+
+/* --- Code: show operators exactly as typed (JetBrains Mono would turn >= into a ligature) --- */
+code, pre {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "calt" 0;
+}
+
+/* --- Data tables in posts: keep each value on one line, scroll sideways if the table is wider than the column --- */
+.post-content table {
+    font-size: 0.85rem;
+}
+
+.post-content td {
+    white-space: nowrap;
+}
+
+.post-content th {
+    min-width: 7rem;
+}
