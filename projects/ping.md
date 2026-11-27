@@ -10,8 +10,8 @@ project_type: "School project (mobile game course)"
 duration: "8 weeks, spring 2025"
 github_url: https://github.com/Gibraltar-ops/Crypt
 itch_url: https://gibraltarops.itch.io/ping
-media: /images/ping_gameplay.webp
-media_alt: Ping echo-location horror gameplay
+media: /images/ping_monster.webp
+media_alt: A dark dungeon in Ping where the monster shows up as glowing shapes in the distance
 highlight:
   text: Tuning the echo wave radius and falloff to find the sweet spot between tension and readability.
   image: /images/ping_highlight.webp
@@ -29,6 +29,8 @@ Ping is a first-person horror game for mobile where you make your way through a 
 - Added a second enemy at the end that only moves when you're not looking at it, like the weeping angels from Doctor Who. Having both them and the invisible monster around at the same time made it really uncomfortable to play.
 - Set up the touch controls: standard FPS controls with two touch circles, the left one for moving and the right one for turning the camera.
 - Built it for mobile from the start using Unity's mobile settings, and later made a PC version you can play on itch.
+
+![Ping on a phone: the left touch circle moves you, the right one turns the camera](/images/ping_mobilecontrols.jpg)
 
 <!-- TODO: sections to fill in, then remove the comment markers around them.
      (HTML comments are hidden on the page but visible in the page source.)

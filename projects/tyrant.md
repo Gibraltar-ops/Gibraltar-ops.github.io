@@ -17,8 +17,8 @@ media: /images/tyrant_gameplay.webp
 media_alt: Tyrant tentacle physics gameplay
 highlight:
   text: Trying which line renderer logic works best with our intended vision
-  image: /images/tyrant_line_test.webp
-  alt: Testing line renderer logic
+  image: /images/tyrant_linerenderer.webp
+  alt: Four tentacle line renderer tests side by side, each moving in a different way
 ---
 
 ## About the Project
@@ -31,6 +31,8 @@ Tyrant is a 2D apocalyptic clicker where you play an alien creature floating abo
 - Wrote the `EatManager`, which keeps track of where the tentacles should carry the humans.
 - Built the tentacles with joints and IK: an invisible skeleton that moves from one point to another, and a very pimped line renderer on top that follows an invisible IK target to give the illusion of a slithering tentacle.
 - Implemented sound and coded in the effects.
+
+![The creature's crab arms stabbing down at a group of tanks](/images/tyrant_kebabarmIK.webp)
 
 <!-- TODO: sections to fill in, then remove the comment markers around them.
      (HTML comments are hidden on the page but visible in the page source.)

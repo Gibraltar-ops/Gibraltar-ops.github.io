@@ -41,7 +41,7 @@ Although it ultimately didn't make the final vertical slice release, I spent sig
 
 I collaborated with the teams graphical artists to create a moving background the main menu instead of a static picture. Here, I coded a water shader creating procedural waves in Unreals visual scripting language Blueprints. The results were very satisfying!
 
-<!-- Här vill jag ha in en gif på vattnet-->
+![The main menu background: a harbour wall at night with procedural waves in the water](/images/lastkaj0_water.webp)
 
 <!-- TODO: sections to fill in, then remove the comment markers around them.
      (HTML comments are hidden on the page but visible in the page source.)

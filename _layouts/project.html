@@ -54,8 +54,15 @@ layout: default
         {% endif %}
     </div>
 
+    {% comment %}
+        Images are only shown if the file actually exists in the site,
+        so a missing clip leaves no broken-image icon on the page.
+    {% endcomment %}
+    {% assign media_file = site.static_files | where: "path", page.media | first %}
+    {% assign highlight_file = site.static_files | where: "path", page.highlight.image | first %}
+
     <!-- Gif (WebP) -->
-    {% if page.media %}
+    {% if media_file %}
     <div class="project-media">
         {% if page.itch_url %}<a href="{{ page.itch_url }}" target="_blank" rel="noopener">{% endif %}
             <img src="{{ page.media | relative_url }}" alt="{{ page.media_alt }}">
@@ -68,7 +75,7 @@ layout: default
         {{ content }}
     </div>
 
-    {% if page.highlight %}
+    {% if page.highlight and highlight_file %}
     <div class="project-tweet">
         <h2>Development Highlight</h2>
         <div class="social-post-card">

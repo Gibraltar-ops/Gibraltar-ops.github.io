@@ -1,0 +1,11 @@
+{% comment %}
+    Thumbnail for a project card on the start page.
+    Usage: {% include card-image.html src="/images/ping_thumb.webp" alt="Ping Thumbnail" %}
+    If the file doesn't exist yet, a plain placeholder is shown instead of a broken image.
+{% endcomment %}
+{% assign card_file = site.static_files | where: "path", include.src | first %}
+{% if card_file %}
+<img src="{{ include.src | relative_url }}" alt="{{ include.alt }}">
+{% else %}
+<div class="project-card-placeholder" aria-hidden="true"></div>
+{% endif %}
