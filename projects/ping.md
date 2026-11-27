@@ -1,4 +1,4 @@
-﻿---
+---
 layout: project
 title: Ping
 role: Mobile / Gameplay Programmer

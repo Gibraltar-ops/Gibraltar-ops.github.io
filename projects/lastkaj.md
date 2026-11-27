@@ -1,4 +1,4 @@
-﻿---
+---
 layout: project
 title: Lastkaj 0
 role: Gameplay Programmer/Designer

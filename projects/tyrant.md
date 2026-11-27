@@ -1,4 +1,4 @@
-﻿---
+---
 layout: project
 title: Tyrant
 role: Gameplay Programmer
