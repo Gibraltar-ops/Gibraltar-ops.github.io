@@ -1,0 +1,35 @@
+# Site settings
+title: Magnus Henry
+tagline: Game Developer
+description: Game developer focused on gameplay programming, networking, game design and UX.
+url: "https://magnushenry.se"
+baseurl: ""
+lang: en
+
+author:
+  name: Magnus Henry
+  email: magnushenry9@gmail.com
+  github: Gibraltar-ops
+  linkedin: magnushenry
+
+# Markdown: GitHub-flavoured Markdown, Rouge syntax highlighting,
+# table of contents built from H2 and H3 headings.
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  toc_levels: 2..3
+
+# Blog posts are served at /blog/<slug>/ (no date in the URL).
+permalink: /blog/:title/
+
+# Adds <title>, description and link-preview tags (LinkedIn, Discord etc.).
+plugins:
+  - jekyll-seo-tag
+
+# Files that should never be published.
+exclude:
+  - "*.sln"
+  - .idea
+  - README.md

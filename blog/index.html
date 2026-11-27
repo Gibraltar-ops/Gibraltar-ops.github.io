@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+description: Technical deep-dives and devlogs on gameplay programming and multiplayer networking.
+---
+
+<!-- Blog index: lists every post in _posts, newest first -->
+<section class="blog-section">
+    <h2>Blog</h2>
+
+    {% if site.posts.size > 0 %}
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li class="post-list-item">
+            <a href="{{ post.url | relative_url }}">
+                <h3>{{ post.title }}</h3>
+                <p class="post-meta">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                    {% if post.project %}· {{ post.project }}{% endif %}
+                </p>
+                {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No posts yet.</p>
+    {% endif %}
+</section>

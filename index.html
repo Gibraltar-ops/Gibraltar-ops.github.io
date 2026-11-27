@@ -1,25 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnus Henry | Game Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<!-- Navigation -->
-<header class="main-header">
-    <nav>
-        <div class="logo">Magnus Henry</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+﻿---
+layout: default
+---
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section">
@@ -60,8 +41,8 @@
     <div class="project-grid">
 
         <!-- Project Card 1 -->
-        <a href="projects/lastkaj.html" class="project-card">
-            <img src="images/lastkaj_thumb.webp" alt="Lastkaj 0 Thumbnail">
+        <a href="{{ '/projects/lastkaj.html' | relative_url }}" class="project-card">
+            <img src="{{ '/images/lastkaj_thumb.webp' | relative_url }}" alt="Lastkaj 0 Thumbnail">
             <div class="project-info">
                 <h3>Lastkaj 0</h3>
                 <p>A puzzle platformer set in the veins of Portal</p>
@@ -69,8 +50,8 @@
         </a>
 
         <!-- Project Card 2 -->
-        <a href="projects/tyrant.html" class="project-card">
-            <img src="images/tyrant_thumb.webp" alt="Tyrant Thumbnail">
+        <a href="{{ '/projects/tyrant.html' | relative_url }}" class="project-card">
+            <img src="{{ '/images/tyrant_thumb.webp' | relative_url }}" alt="Tyrant Thumbnail">
             <div class="project-info">
                 <h3>Tyrant</h3>
                 <p>An apocalyptic clicker.</p>
@@ -78,8 +59,8 @@
         </a>
 
         <!-- Project Card 3 -->
-        <a href="projects/ping.html" class="project-card">
-            <img src="images/ping_thumb.webp" alt="Ping Thumbnail">
+        <a href="{{ '/projects/ping.html' | relative_url }}" class="project-card">
+            <img src="{{ '/images/ping_thumb.webp' | relative_url }}" alt="Ping Thumbnail">
             <div class="project-info">
                 <h3>Ping</h3>
                 <p>A first-person echo-location horror designed for mobile.</p>
@@ -96,16 +77,3 @@
         <p>I am a game programming student with two prior years of experience in UX design. I thrive in multidisciplinary teams and have experience building robust systems, ranging from character controllers, audio implementation, and in-engine custom C++ code to driving trains and creating user-friendly workflows through UX Design.</p>
     </div>
 </section>
-
-<!-- Contact (Egen dedikerad footer) -->
-<footer id="contact" class="footer-section">
-    <div class="contact-container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:magnushenry9@gmail.com">magnushenry9@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Gibraltar-ops" target="_blank">github.com/Gibraltar-ops</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/magnushenry" target="_blank">linkedin.com/in/magnushenry</a></p>
-    </div>
-</footer>
-
-</body>
-</html>

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<!-- Project page. Facts come from the page's front matter, the text from its Markdown body. -->
+<section class="project-detail-section">
+
+    <!-- Intro: Name and role -->
+    <div class="project-header">
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.role }}</h2>
+    </div>
+
+    <!-- Skills / Tech Stack -->
+    <div class="project-meta">
+        {% if page.engine %}<p><strong>Engine:</strong> {{ page.engine }}</p>{% endif %}
+        {% if page.languages %}<p><strong>Languages:</strong> {{ page.languages }}</p>{% endif %}
+        {% if page.itch_url %}<p><a href="{{ page.itch_url }}" target="_blank" rel="noopener" class="itch-btn">Play on Itch.io ↗</a></p>{% endif %}
+    </div>
+
+    <!-- Gif (WebP) -->
+    {% if page.media %}
+    <div class="project-media">
+        {% if page.itch_url %}<a href="{{ page.itch_url }}" target="_blank" rel="noopener">{% endif %}
+            <img src="{{ page.media | relative_url }}" alt="{{ page.media_alt }}">
+        {% if page.itch_url %}</a>{% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Project text (the Markdown body of the page) -->
+    <div class="project-description">
+        {{ content }}
+    </div>
+
+    {% if page.highlight %}
+    <div class="project-tweet">
+        <h3>Development Highlight</h3>
+        <div class="social-post-card">
+            <p class="social-post-text">{{ page.highlight.text }}</p>
+            <div class="social-media-container">
+                <img src="{{ page.highlight.image | relative_url }}" alt="{{ page.highlight.alt }}">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+</section>

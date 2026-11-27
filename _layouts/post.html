@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<!-- Blog post. The table of contents is placed in the post itself with:
+     * TOC
+     {:toc}
+-->
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
+<article class="post">
+
+    <header class="post-header">
+        <a href="{{ '/blog/' | relative_url }}" class="post-back">← All posts</a>
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            · {{ minutes }} min read
+            {% if page.project %}· Project: {{ page.project }}{% endif %}
+        </p>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+</article>
