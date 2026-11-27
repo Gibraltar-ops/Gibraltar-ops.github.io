@@ -90,6 +90,40 @@ nav {
     transform: scaleX(1);
 }
 
+/* --- Keyboard accessibility --- */
+
+/* Skip link: hidden above the viewport until it receives keyboard focus */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 200; /* above the sticky header */
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* Clear focus ring for keyboard users (mouse clicks don't show it).
+   Accent blue on the dark background is 7.3:1, well above the 3:1 required. */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* <main> gets focus from the skip link; no ring needed around the whole page */
+main:focus {
+    outline: none;
+}
+
 /* Anchor jumps (/#skills etc.) stop below the sticky header instead of under it */
 html {
     scroll-padding-top: 5rem;
@@ -130,7 +164,9 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.hero-content h2 {
+/* Subtitle under the name. A <p>, not a heading: it describes the h1 rather than starting a section */
+.hero-subtitle {
+    font-weight: bold;
     font-size: 2rem;
     color: var(--accent-color);
     border-bottom: none;
@@ -215,7 +251,9 @@ h2 {
 
 .itch-btn {
     display: inline-block;
-    background-color: #fa5c5c; /* Itch.io klassiska röda/rosa accentfärg */
+    /* Darker shade of Itch.io's red (#fa5c5c): white text on #fa5c5c is only 3.1:1,
+       on #c93636 it is 5.2:1, which passes WCAG AA (4.5:1) */
+    background-color: #c93636;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -225,7 +263,7 @@ h2 {
 }
 
 .itch-btn:hover {
-    background-color: #e04848;
+    background-color: #a82c2c; /* 6.9:1 with white */
     transform: translateY(-2px);
 }
 
@@ -300,7 +338,9 @@ a.logo {
     line-height: 1.2;
 }
 
-.project-header h2 {
+/* Role under the project name (a <p>, see .hero-subtitle) */
+.project-role {
+    font-weight: bold;
     font-size: 1.5rem;
     color: var(--accent-color);
     border-bottom: none;
@@ -318,8 +358,13 @@ a.logo {
     margin-bottom: 2rem;
 }
 
-.project-description h3,
-.project-tweet h3 {
+/* Section headings on project pages are h2 (directly under the h1), styled smaller
+   than the big underlined h2 used on the start page */
+.project-description h2,
+.project-tweet h2 {
+    display: block;
+    font-size: 1.3rem;
+    border-bottom: none;
     margin: 2rem 0 0.75rem;
     color: var(--accent-color);
 }
@@ -366,9 +411,21 @@ a.logo {
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.post-list-item h3 {
+/* Post titles in the list are h2 (under the page's h1), styled smaller than section h2s */
+.post-list-item h2 {
+    display: block;
+    font-size: 1.3rem;
+    border-bottom: none;
     color: var(--accent-color);
     margin-bottom: 0.25rem;
+}
+
+/* h1 on sub-pages such as /blog/, same look as the section h2s on the start page */
+.page-title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
 }
 
 .post-meta {
@@ -541,3 +598,63 @@ a.logo {
 .highlight .nc, .highlight .nn { color: #4ec9b0; } /* classes, namespaces */
 .highlight .o, .highlight .p { color: #d4d4d4; } /* operators, punctuation */
 .highlight .n, .highlight .nb, .highlight .nv { color: #9cdcfe; } /* names, variables */
+/* --- Small screens (phones) ---
+   WCAG 1.4.10 Reflow: all content must fit at 320 px width without sideways scrolling.
+   The nav wraps under the logo instead of running off-screen. */
+@media (max-width: 600px) {
+    .main-header {
+        padding: 0.75rem 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem 1.1rem;
+        font-size: 0.95rem;
+    }
+
+    /* The header is taller when wrapped, so anchor jumps need more room */
+    html {
+        scroll-padding-top: 6.5rem;
+    }
+
+    section, footer {
+        padding: 3rem 1.25rem;
+    }
+
+    h2,
+    .page-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.75rem;
+        line-height: 1.15;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .project-header h1,
+    .post-title {
+        font-size: 2.1rem;
+    }
+
+    .post {
+        padding: 3rem 1.25rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* minmax(300px) would overflow below ~340 px */
+    }
+}

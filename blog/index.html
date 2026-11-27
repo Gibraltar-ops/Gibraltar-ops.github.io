@@ -6,14 +6,14 @@ description: Technical deep-dives and devlogs on gameplay programming and multip
 
 <!-- Blog index: lists every post in _posts, newest first -->
 <section class="blog-section">
-    <h2>Blog</h2>
+    <h1 class="page-title">Blog</h1>
 
     {% if site.posts.size > 0 %}
     <ul class="post-list">
         {% for post in site.posts %}
         <li class="post-list-item">
             <a href="{{ post.url | relative_url }}">
-                <h3>{{ post.title }}</h3>
+                <h2>{{ post.title }}</h2>
                 <p class="post-meta">
                     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                     {% if post.project %}· {{ post.project }}{% endif %}

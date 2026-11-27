@@ -13,11 +13,11 @@ highlight:
   alt: Testing line renderer logic
 ---
 
-### About the Project
+## About the Project
 
 A 2D apocalyptic clicker game featuring a tentacled creature with physics-simulated tentacles. The core loop revolves around consuming mankind in order to collect biomass and scale the creature's presence.
 
-### Key Responsibilities & Technical Implementation
+## Key Responsibilities & Technical Implementation
 
 - Developed the `TyrantController` and `EatManager` scripts to handle core gameplay logic and entity consumption.
 - Implemented procedural line renderers operating in World Space to drive the physics-based tentacle sprawl mechanic.

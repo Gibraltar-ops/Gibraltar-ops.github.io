@@ -7,7 +7,7 @@ layout: default
     <!-- Intro: Name and role -->
     <div class="project-header">
         <h1>{{ page.title }}</h1>
-        <h2>{{ page.role }}</h2>
+        <p class="project-role">{{ page.role }}</p>
     </div>
 
     <!-- Skills / Tech Stack -->
@@ -33,7 +33,7 @@ layout: default
 
     {% if page.highlight %}
     <div class="project-tweet">
-        <h3>Development Highlight</h3>
+        <h2>Development Highlight</h2>
         <div class="social-post-card">
             <p class="social-post-text">{{ page.highlight.text }}</p>
             <div class="social-media-container">

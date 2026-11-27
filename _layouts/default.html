@@ -10,9 +10,15 @@
 </head>
 <body>
 
+<!-- Skip link: first thing keyboard users reach, jumps past the navigation (WCAG 2.4.1) -->
+<a class="skip-link" href="#main">Skip to content</a>
+
 {% include header.html %}
 
+<!-- Main landmark: lets screen readers jump straight to the page content -->
+<main id="main" tabindex="-1">
 {{ content }}
+</main>
 
 {% include footer.html %}
 
