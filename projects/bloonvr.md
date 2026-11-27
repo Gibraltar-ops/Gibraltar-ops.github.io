@@ -16,7 +16,7 @@ media_alt: ""                                       # TODO describe the clip
 
 ## About the Project
 
-BLOONVR is a VR game where you try to get as high up as possible with your balloon. You have to juggle blowing up new balloons while using a pistol and a seagull bazooka to shoot down your opponents' balloons, and the seagulls that try to pop yours. It was a school project that we kept internal, so it's not on itch. My focus was the clouds and the sense of height, which were both the hardest part and what I'm most happy with.
+BLOONVR is a VR game where you try to get as high up as possible with your balloon. You have to juggle blowing up new balloons while using a pistol and a seagull bazooka to shoot down your opponents' balloons, and the seagulls that try to pop yours. It was a school project that we kept internal, so it's not on itch. My focus was the clouds, the sense of height and the sound. The clouds and the height were both the hardest part and what I'm most happy with.
 
 ## What I did
 
@@ -24,8 +24,7 @@ BLOONVR is a VR game where you try to get as high up as possible with your ballo
 - Wrote custom HLSL to curve the horizon so the world feels like a globe, instead of a square edge below you. Together with distance fog, it made the horizon believable.
 - Made the illusion of height: the player never moves from the origin. Instead the ground moves down and scales down the higher you get, while the cloud base moves closer and scales up.
 - Kept movement close to the player to a minimum to avoid motion sickness.
-- Did the sound, with wind that changes when you're falling, balloon pops, guns, seagulls and music.
-- Added haptics when you're in free fall.
+- Did the sound and haptics: wind that changes when you're falling, balloon pops, guns, seagulls and music, plus haptics in the controllers when you're in free fall.
 
 <!-- TODO: sections to fill in, then remove the comment markers around them.
      (HTML comments are hidden on the page but visible in the page source.)
