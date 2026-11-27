@@ -5,7 +5,7 @@ role: Creative Lead/Gameplay Programmer/Designer/ SFX/VFX / UX/UI
 engine: Unreal Engine 5
 languages: C++ / Visual Scripting
 project_type: "School project (Yrgo)" 
-team: "3 programmers, 4 artists"
+team: "3 programmers: me, [Otto Wendt](https://gphallon.itch.io) and [Ludvig Orvegård](https://github.com/Orvegaard). 4 artists: [Abbe Elf](https://www.artstation.com/abbeelf), [Felicia Iversen](https://www.artstation.com/feliciaiversen), [Tinn Golubović](https://www.artstation.com/tinngolubovic) and [Vincent Wennerström](https://www.artstation.com/vincentwennerstrom)"
 duration: "8 weeks, spring 2025"
 platform: "PC (Windows)"
 itch_url: https://yrgo.itch.io/lastkaj-0
@@ -19,14 +19,15 @@ highlight:
 
 ## About the Project
 
-A first-person puzzle game set in the veins of Portal. Players navigate complex enviroments bending gravity of themselves as well as other objects in order to retrieve valuable objects within the levels.
+Lastkaj 0 is a first-person puzzle game set in the veins of Portal. You play a dock worker in the port of Gothenburg, going into contaminated containers where you bend gravity on yourself and on other objects to retrieve what you came for. I was the creative lead, which meant I held the vision and had the final say on design, even though we worked agile and a lot of decisions were made fast by each of us to keep the project moving. What I'm happiest with is how well the gravity shift actually works.
 
-## Key Responsibilities & Technical Implementation
+## What I did
 
-- Developed weapon mechanics centered around the players utility tool.
-- Implemented audio mechanics through MetaSounds to enhance gameplay.
-- Optimized components and managed script integration within a multidisciplinary team environment.
-- Provided UX/UI expertise on developing the User Interface
+- Built the gravity shift in C++, including flipping the controls so the game plays the same no matter which way is down.
+- Made footsteps that follow the animations, plus sound effects and volumes in MetaSounds that change based on what you're doing and where you are.
+- Hooked up the artists' VFX in the game.
+- Worked on the UI with a focus on readability, so you find the right thing fast without getting frustrated.
+- Tried to build a cable that pulls you back out of the containers. It ended up too buggy to work properly and was cut (more below).
 
 ## Technical focus 1: The Procedural Cable System
 
