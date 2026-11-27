@@ -6,7 +6,7 @@ engine: Unity
 languages: C#
 team: "Solo"
 platform: "Mobile, PC"
-project_type: "School project"
+project_type: "School project (mobile game course)"
 duration: "8 weeks, spring 2025"
 github_url: https://github.com/Gibraltar-ops/Crypt
 itch_url: https://gibraltarops.itch.io/ping

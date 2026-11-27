@@ -17,13 +17,17 @@ media_alt: ""                                       # TODO describe the clip, e.
 
 ## About the Project
 
-A Sokoban runner game made in SDL3.
-<!-- TODO: 2-4 sentences: what the player does and what makes it more than classic Sokoban. -->
+Dungeon Runner is a top-down 2D Sokoban runner. Every time you take a step, the enemies take one or more steps too, so you have to puzzle your moves together to make it through the level. One wrong move and the monsters get you. We built it from scratch in C++ and SDL3, all the boilerplate included. Getting the enemies' movement logic in and writing an A* algorithm that actually worked was the big challenge, but it's also what I'm most happy with.
 
-## Key Responsibilities & Technical Implementation
+## What I did
 
-<!-- TODO: bullet list of what you built, e.g. tile-based movement and crate pushing,
-     level loading from Tiled (.tmj), level editor, enemy AI and pathfinding. -->
+- Designed and programmed the enemies:
+  - one that follows an A* path and takes a step toward you every time you move
+  - a faster one that takes two steps for every one of yours
+  - one that moves in straight lines all the way, like a rook in chess, and gets you if you walk into its line of sight, so you have to block it to get past
+  - a giant one that takes up four tiles and still finds its way to you with A*
+- Wrote the A* pathfinding, including the version for the big 2x2 enemy.
+- Designed the levels and the step-based movement.
 
 <!-- TODO: sections to fill in, then remove the comment markers around them.
      (HTML comments are hidden on the page but visible in the page source.)
