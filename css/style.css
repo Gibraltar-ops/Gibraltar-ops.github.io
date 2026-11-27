@@ -203,17 +203,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Skills */
-.skills-container {
-    display: flex;
-    gap: 4rem;
-    flex-wrap: wrap;
-}
-
-.skill-category ul {
-    list-style-position: inside;
-}
-
 /* Projekt Grid */
 .project-grid {
     display: grid;
@@ -393,21 +382,62 @@ h2 {
     display: block;
 }
 
-/* --- About & Contact Centered Sections --- */
+/* --- About Me + Tools & Languages ---
+   Two columns: text on the left (wider), skills on the right. Left-aligned:
+   centred paragraphs and lists are harder to read because every line starts in a new place. */
 .about-section {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 3rem 4rem;
+    align-items: start;
 }
 
-.about-container {
-    max-width: 800px; /* Begränsar radlängden för att följa god UX/läsbarhet */
-}
-
-.about-container p {
+.about-text p {
+    max-width: 65ch; /* comfortable line length for reading */
     font-size: 1.15rem;
     line-height: 1.8;
     color: #ccc;
+}
+
+.about-skills {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.about-skills h3 {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.skill-category + .skill-category {
+    margin-top: 1.25rem;
+}
+
+.skill-category h4 {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999; /* 5.8:1 on the card background */
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Each tool as a small tag */
+.skill-category li {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 999px;
+    font-size: 0.95rem;
 }
 
 .footer-section {
@@ -716,6 +746,11 @@ a.logo {
    WCAG 1.4.10 Reflow: all content must fit at 320 px width without sideways scrolling.
    The nav wraps under the logo instead of running off-screen. */
 @media (max-width: 600px) {
+    /* About + skills stack on top of each other */
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
     /* Team row: label above the names instead of beside them */
     .project-team > div {
         grid-template-columns: 1fr;

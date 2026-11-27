@@ -9,9 +9,8 @@
     <nav aria-label="Main">
         <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
         <ul class="nav-links">
-            <li><a href="{{ '/#about' | relative_url }}">About</a></li>
-            <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
             <li><a href="{{ '/#projects' | relative_url }}"{% if on_projects %} class="is-active" aria-current="page"{% endif %}>Projects</a></li>
+            <li><a href="{{ '/#about' | relative_url }}">About</a></li>
             <li><a href="{{ '/blog/' | relative_url }}"{% if on_blog %} class="is-active" aria-current="page"{% endif %}>Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
