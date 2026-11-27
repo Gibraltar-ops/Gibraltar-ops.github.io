@@ -1,7 +1,7 @@
 # Site settings
 title: Magnus Henry
-tagline: Gameplay Programmer
-description: Gameplay programmer based in Gothenburg, Sweden. Projects in Unreal Engine, Unity and SDL3, plus a blog on multiplayer networking.
+tagline: Game Designer and Programmer
+description: Game designer and programmer based in Gothenburg, Sweden. Projects in Unreal Engine, Unity and SDL3, plus a blog on multiplayer networking.
 url: "https://magnushenry.se"
 baseurl: ""
 lang: en
