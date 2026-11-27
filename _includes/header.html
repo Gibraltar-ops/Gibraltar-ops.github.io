@@ -1,12 +1,18 @@
-<!-- Navigation (shared by every page) -->
+<!-- Navigation (shared by every page)
+     Active page: "Projects" on project pages, "Blog" on the blog and its posts.
+     On the start page, js/nav.js highlights the section currently in view (scrollspy). -->
+{% assign on_projects = false %}
+{% if page.layout == 'project' %}{% assign on_projects = true %}{% endif %}
+{% assign on_blog = false %}
+{% if page.url contains '/blog/' %}{% assign on_blog = true %}{% endif %}
 <header class="main-header">
-    <nav>
+    <nav aria-label="Main">
         <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
         <ul class="nav-links">
             <li><a href="{{ '/#about' | relative_url }}">About</a></li>
             <li><a href="{{ '/#skills' | relative_url }}">Skills</a></li>
-            <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
-            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/#projects' | relative_url }}"{% if on_projects %} class="is-active" aria-current="page"{% endif %}>Projects</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}"{% if on_blog %} class="is-active" aria-current="page"{% endif %}>Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>

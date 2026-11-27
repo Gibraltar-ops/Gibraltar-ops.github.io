@@ -14,5 +14,7 @@
 
 {% include footer.html %}
 
+{% if page.url == '/' %}<script src="{{ '/js/nav.js' | relative_url }}" defer></script>{% endif %}
+
 </body>
 </html>
