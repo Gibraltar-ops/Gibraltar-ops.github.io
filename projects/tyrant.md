@@ -5,7 +5,7 @@ role: Gameplay Programmer
 engine: Unity
 languages: C#
 project_type: "School project (Yrgo)"
-team: "3 programmers: me, [Gustav Engelbrektsson](https://github.com/Klomne) and [Ludvig Orvegård](https://github.com/Orvegaard). 4 artists: [Vincent Meriot](https://vincentmeriot.itch.io), [Felicia Iversen](https://www.artstation.com/feliciaiversen), Linnéa Löfstrand and Isabella Johansson. Music and sound: Rebecka Kron and Danielle Larsson"
+team: "3 programmers: me, [Gustav Engelbrektsson](https://github.com/Klomne) and [Ludvig Orvegård](https://github.com/Orvegaard). 4 artists: [Vincent Meriot](https://vincentmeriot.itch.io), [Felicia Iversen](https://www.artstation.com/feliciaiversen), [Linnéa Löfstrand](https://honeybun-0.itch.io) and [Isabella Johansson](https://bellabooskii.itch.io). Music and sound: Rebecka Kron and Danielle Larsson"
 duration: "8 weeks, autumn 2024"
 platform: "PC (Windows)"
 github_url: https://github.com/Gibraltar-ops/Tyrant-Project
@@ -26,8 +26,7 @@ Tyrant is a 2D apocalyptic clicker where you play an alien creature floating abo
 
 - Wrote the `TyrantController`, which is basically the player script for the creature.
 - Wrote the `EatManager`, which keeps track of where the tentacles should carry the humans.
-- Built the tentacles with joints and IK: an invisible skeleton that moves from one point to another, and a visual arm on top that uses physics and IK to give the illusion of a slithering tentacle.
-- Helped optimize the game when the number of humans got out of hand, which ended with us putting a limit on how many can spawn.
+- Built the tentacles with joints and IK: an invisible skeleton that moves from one point to another, and a very pimped line renderer on top that follows an invisible IK target to give the illusion of a slithering tentacle.
 - Implemented sound and coded in the effects.
 
 <!-- TODO: sections to fill in, then remove the comment markers around them.
