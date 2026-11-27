@@ -30,7 +30,7 @@ layout: default
             {% if page.duration %}<div><dt>Duration</dt><dd>{{ page.duration }}</dd></div>{% endif %}
             {% if page.platform %}<div><dt>Platform</dt><dd>{{ page.platform }}</dd></div>{% endif %}
             {% if page.engine or page.languages %}
-            <div><dt>Tech</dt><dd>{{ page.engine }}{% if page.engine and page.languages %} · {% endif %}{{ page.languages }}</dd></div>
+            <div><dt>Tech</dt><dd>{{ page.engine }}{% if page.engine and page.languages %}&nbsp;· {% endif %}{{ page.languages }}</dd></div>
             {% endif %}
         </dl>
 
