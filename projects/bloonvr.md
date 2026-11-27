@@ -6,7 +6,8 @@ role: "Gameplay Programmer / Technical Artist"
 engine: "Unity"                                          
 languages: HLSL, C#                                   
 project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
-team: "4 programmers: me, [Niklas Fischer](https://github.com/sweFisch), [Otto Wendt](https://github.com/Hallon14) and [Ludvig Orvegård](https://github.com/Orvegaard)"
+team:
+  Programmers: "Me, [Niklas Fischer](https://github.com/sweFisch), [Otto Wendt](https://github.com/Hallon14), [Ludvig Orvegård](https://github.com/Orvegaard)"
 duration: "4 weeks, spring 2026"
 platform: "VR (Meta Quest 3)"
 github_url: https://github.com/Gibraltar-ops/VRProject2026

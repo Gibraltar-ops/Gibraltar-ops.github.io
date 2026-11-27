@@ -5,7 +5,10 @@ role: Gameplay Programmer
 engine: Unity
 languages: C#
 project_type: "School project (Yrgo)"
-team: "3 programmers: me, [Gustav Engelbrektsson](https://github.com/Klomne) and [Ludvig Orvegård](https://github.com/Orvegaard). 4 artists: [Vincent Meriot](https://vincentmeriot.itch.io), [Felicia Iversen](https://www.artstation.com/feliciaiversen), [Linnéa Löfstrand](https://honeybun-0.itch.io) and [Isabella Johansson](https://bellabooskii.itch.io). Music and sound: Rebecka Kron and Danielle Larsson"
+team:
+  Programmers: "Me, [Gustav Engelbrektsson](https://github.com/Klomne), [Ludvig Orvegård](https://github.com/Orvegaard)"
+  Artists: "[Vincent Meriot](https://vincentmeriot.itch.io), [Felicia Iversen](https://www.artstation.com/feliciaiversen), [Linnéa Löfstrand](https://honeybun-0.itch.io), [Isabella Johansson](https://bellabooskii.itch.io)"
+  Music & sound: "Rebecka Kron, Danielle Larsson"
 duration: "8 weeks, autumn 2024"
 platform: "PC (Windows)"
 github_url: https://github.com/Gibraltar-ops/Tyrant-Project

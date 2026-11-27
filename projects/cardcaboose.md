@@ -5,7 +5,9 @@ role: Network & Gameplay Programmer
 engine: Unreal Engine 5.7
 languages: C++
 project_type: "Degree project (Yrgo)"
-team: "2 programmers: me and [Gustav Engelbrektsson](https://itch.io/profile/klomne). 2 artists: [Abbe Elf](https://www.artstation.com/abbeelf) and [Felicia Iversen](https://www.artstation.com/feliciaiversen)"
+team:
+  Programmers: "Me, [Gustav Engelbrektsson](https://itch.io/profile/klomne)"
+  Artists: "[Abbe Elf](https://www.artstation.com/abbeelf), [Felicia Iversen](https://www.artstation.com/feliciaiversen)"
 duration: "8 weeks, autumn 2026"
 platform: "PC (Steam, coming later)"
 blog_url: /blog/stupidly-stable-network-replication/

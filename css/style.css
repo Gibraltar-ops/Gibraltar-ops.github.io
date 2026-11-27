@@ -293,9 +293,48 @@ h2 {
     font-weight: 600;
 }
 
-/* Links inside the fact sheet (e.g. team members) */
-.project-facts dd a {
+/* Team row: full width under the facts, label column + names. One line per discipline. */
+.project-team {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #333;
+}
+
+.project-team > div {
+    display: grid;
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.project-team dt {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999; /* 5.8:1 on the card background */
+}
+
+.project-team dd {
+    font-weight: 600;
+}
+
+/* Links in the fact sheet and team row: a thin, faded underline set a bit below the text.
+   Still a non-colour cue that it is a link (WCAG 1.4.1), but much calmer than a full underline. */
+.project-facts dd a,
+.project-team dd a {
     color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(77, 166, 255, 0.45);
+    text-underline-offset: 4px;
+}
+
+.project-facts dd a:hover,
+.project-team dd a:hover {
+    text-decoration-color: var(--accent-color);
 }
 
 .project-links {
@@ -677,6 +716,12 @@ a.logo {
    WCAG 1.4.10 Reflow: all content must fit at 320 px width without sideways scrolling.
    The nav wraps under the logo instead of running off-screen. */
 @media (max-width: 600px) {
+    /* Team row: label above the names instead of beside them */
+    .project-team > div {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
+
     .main-header {
         padding: 0.75rem 1rem;
     }

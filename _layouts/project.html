@@ -12,15 +12,39 @@ layout: default
 
     <!-- Fact sheet: what a recruiter scans first. Each row only shows if the field is set in front matter. -->
     <div class="project-meta">
+        {% comment %}
+            "team" can be written two ways in front matter:
+              team: "Solo"                         -> shown as a short fact in the grid
+              team:                                -> shown as its own full-width row, one line per group
+                Programmers: "Me, [Name](https://...)"
+                Artists: "[Name](https://...)"
+            jsonify turns a group list into text starting with "{", which is how the two are told apart.
+        {% endcomment %}
+        {% assign team_json = page.team | jsonify %}
+        {% assign team_is_groups = false %}
+        {% if team_json contains '{' %}{% assign team_is_groups = true %}{% endif %}
+
         <dl class="project-facts">
             {% if page.project_type %}<div><dt>Type</dt><dd>{{ page.project_type }}</dd></div>{% endif %}
-            {% comment %} markdownify lets the team field contain links: [Name](https://...) {% endcomment %}
-            {% if page.team %}<div><dt>Team</dt><dd>{{ page.team | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd></div>{% endif %}
+            {% if page.team and team_is_groups == false %}<div><dt>Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
             {% if page.duration %}<div><dt>Duration</dt><dd>{{ page.duration }}</dd></div>{% endif %}
             {% if page.platform %}<div><dt>Platform</dt><dd>{{ page.platform }}</dd></div>{% endif %}
-            {% if page.engine %}<div><dt>Engine</dt><dd>{{ page.engine }}</dd></div>{% endif %}
-            {% if page.languages %}<div><dt>Languages</dt><dd>{{ page.languages }}</dd></div>{% endif %}
+            {% if page.engine or page.languages %}
+            <div><dt>Tech</dt><dd>{{ page.engine }}{% if page.engine and page.languages %} · {% endif %}{{ page.languages }}</dd></div>
+            {% endif %}
         </dl>
+
+        {% if team_is_groups %}
+        <!-- Team: one row per discipline, names can be links (markdownify turns [Name](url) into <a>) -->
+        <dl class="project-team">
+            {% for group in page.team %}
+            <div>
+                <dt>{{ group[0] }}</dt>
+                <dd>{{ group[1] | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd>
+            </div>
+            {% endfor %}
+        </dl>
+        {% endif %}
         {% if page.itch_url or page.github_url or page.blog_url %}
         <div class="project-links">
             {% if page.itch_url %}<a href="{{ page.itch_url }}" target="_blank" rel="noopener" class="itch-btn">Play on Itch.io ↗</a>{% endif %}

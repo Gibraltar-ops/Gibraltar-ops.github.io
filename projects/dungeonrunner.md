@@ -7,7 +7,8 @@ engine: SDL3
 languages: C++
 github_url: https://github.com/Gibraltar-ops/DungeonRunner
 project_type: "School project (Yrgo)"   
-team: "2 programmers: me and [Gustav Engelbrektsson](https://github.com/Klomne)"
+team:
+  Programmers: "Me, [Gustav Engelbrektsson](https://github.com/Klomne)"
 duration: "6 weeks, autumn 2026"
 platform: "PC (Windows)"
 itch_url: https://gibraltarops.itch.io/dungeon-runner

@@ -5,7 +5,9 @@ role: Creative Lead/Gameplay Programmer/Designer/ SFX/VFX / UX/UI
 engine: Unreal Engine 5
 languages: C++ / Visual Scripting
 project_type: "School project (Yrgo)" 
-team: "3 programmers: me, [Otto Wendt](https://gphallon.itch.io) and [Ludvig Orvegård](https://github.com/Orvegaard). 4 artists: [Abbe Elf](https://www.artstation.com/abbeelf), [Felicia Iversen](https://www.artstation.com/feliciaiversen), [Tinn Golubović](https://www.artstation.com/tinngolubovic) and [Vincent Wennerström](https://www.artstation.com/vincentwennerstrom)"
+team:
+  Programmers: "Me, [Otto Wendt](https://gphallon.itch.io), [Ludvig Orvegård](https://github.com/Orvegaard)"
+  Artists: "[Abbe Elf](https://www.artstation.com/abbeelf), [Felicia Iversen](https://www.artstation.com/feliciaiversen), [Tinn Golubović](https://www.artstation.com/tinngolubovic), [Vincent Wennerström](https://www.artstation.com/vincentwennerstrom)"
 duration: "8 weeks, spring 2025"
 platform: "PC (Windows)"
 itch_url: https://yrgo.itch.io/lastkaj-0
