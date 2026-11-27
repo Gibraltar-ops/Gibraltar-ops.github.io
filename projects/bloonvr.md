@@ -1,17 +1,16 @@
 ---
-# Not on the site yet. Change to "true" (or remove the line) when the page is ready.
-published: false
+
+published: true
 layout: project
 title: BLOONVR
-role: ""                                            # TODO e.g. "Technical Artist / Shader Programmer"
-engine: ""                                          # TODO Unity or Unreal Engine 5
-languages: HLSL                                     # TODO add C# or C++ if used
-# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
-# project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
-# team: "3 programmers, 4 artists"
-# duration: "8 weeks, spring 2026"
-# platform: "VR (Meta Quest 3)"
-# github_url: https://github.com/Gibraltar-ops/...  # no itch_url: the project was not released publicly
+role: "Gameplay Programmer / Technical Artist"        
+engine: "Unity"                                          
+languages: HLSL, C#                                   
+project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
+team: "4 programmers"
+duration: "4 weeks, spring 2026"
+platform: "VR (Meta Quest 3)"
+github_url: https://github.com/Gibraltar-ops/VRProject2026
 media: /images/bloonvr_gameplay.webp
 media_alt: ""                                       # TODO describe the clip
 ---

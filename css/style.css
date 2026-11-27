@@ -1,10 +1,40 @@
-﻿/* Variables and reset */
+﻿/* Fonts (self-hosted, SIL Open Font License, see fonts/LICENSES.txt).
+   font-display: swap shows the fallback font right away and swaps when the file has loaded. */
+@font-face { font-family: 'Chakra Petch';   font-weight: 500; font-style: normal; font-display: swap; src: url('../fonts/chakra-petch-500.woff2') format('woff2'); }
+@font-face { font-family: 'Chakra Petch';   font-weight: 700; font-style: normal; font-display: swap; src: url('../fonts/chakra-petch-700.woff2') format('woff2'); }
+@font-face { font-family: 'Inter';          font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/inter-400.woff2') format('woff2'); }
+@font-face { font-family: 'Inter';          font-weight: 600; font-style: normal; font-display: swap; src: url('../fonts/inter-600.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/jetbrains-mono-400.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 600; font-style: normal; font-display: swap; src: url('../fonts/jetbrains-mono-600.woff2') format('woff2'); }
+
+/* Variables and reset */
 :root {
     --bg-color: #121212;
     --text-color: #f4f4f4;
     --accent-color: #4da6ff;
     --card-bg: #1e1e1e;
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-main: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     /* body text */
+    --font-heading: 'Chakra Petch', 'Segoe UI', sans-serif;                    /* headings, logo, nav */
+    --font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;         /* code and technical labels */
+}
+
+/* Headings and other display text use the heading font */
+h1, h2, h3,
+.logo,
+.nav-links a,
+.hero-subtitle,
+.project-role,
+.itch-btn,
+.github-btn,
+.skip-link {
+    font-family: var(--font-heading);
+}
+
+/* Technical labels and code use the mono font */
+code, pre,
+.project-facts dt,
+.post-meta {
+    font-family: var(--font-mono);
 }
 
 * {
@@ -603,7 +633,7 @@ a.logo {
 /* Inline code and code blocks */
 .post-content code,
 .project-description code {
-    font-family: Consolas, 'Cascadia Code', 'Courier New', monospace;
+    font-family: var(--font-mono);
     font-size: 0.9em;
     background-color: var(--card-bg);
     padding: 0.1em 0.35em;

@@ -1,0 +1,8 @@
+Fonts used on this site. All are licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org
+
+Chakra Petch    - Copyright 2018 The Chakra Petch Project Authors (https://github.com/m4rc1e/Chakra-Petch)
+JetBrains Mono  - Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+Inter           - Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+
+Files: latin subset in WOFF2 format, taken from Fontsource (https://fontsource.org).

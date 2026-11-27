@@ -1,18 +1,16 @@
 ---
-# Not on the site yet. Change to "true" (or remove the line) when the page is ready.
-published: false
+published: true
 layout: project
-title: DungeonRunner
-role: ""                                            # TODO e.g. "Gameplay Programmer"
+title: Dungeon Runner
+role: "Game designer, game programmer" 
 engine: SDL3
 languages: C++
 github_url: https://github.com/Gibraltar-ops/DungeonRunner
-# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
-# project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
-# team: "Solo"
-# duration: "6 weeks, autumn 2026"
-# platform: "PC (Windows)"
-# itch_url: https://gibraltarops.itch.io/...
+project_type: "School project (Yrgo)"   
+team: "2 programmers, me (Magnus Henry) and Gustav Engelbrektsson (https://github.com/Klomne) "
+duration: "6 weeks, autumn 2026"
+platform: "PC (Windows)"
+itch_url: https://gibraltarops.itch.io/dungeon-runner
 media: /images/dungeonrunner_gameplay.webp
 media_alt: ""                                       # TODO describe the clip, e.g. "Player pushing crates onto goal tiles"
 ---
