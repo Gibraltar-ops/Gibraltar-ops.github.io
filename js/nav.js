@@ -12,6 +12,8 @@
 
     const header = document.querySelector('.main-header');
     let ticking = false;
+    let clickedId = null;    // section chosen by a nav click, wins until the jump is done
+    let clickTimer = null;
 
     function setActive(id) {
         links.forEach(link => {
@@ -28,6 +30,14 @@
     function update() {
         ticking = false;
 
+        // A nav link was just clicked: keep that link active while the page jumps.
+        // Needed for short sections at the bottom (About, Contact) that can never
+        // scroll far enough up to pass the line below.
+        if (clickedId) {
+            setActive(clickedId);
+            return;
+        }
+
         // A section counts as "in view" once its top passes a line
         // 30% down the visible area below the sticky header.
         const line = window.scrollY + header.offsetHeight + window.innerHeight * 0.3;
@@ -38,14 +48,26 @@
             }
         }
 
-        // At the very bottom the last section (Contact) may never reach the line.
-        const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-        if (atBottom && sections.length > 0) {
-            current = sections[sections.length - 1].id;
-        }
-
         setActive(current);
     }
+
+    // Clicking a nav link marks it right away. The mark is released on the first
+    // scroll made by the user (wheel, touch or keys) after the jump has finished.
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            clickedId = link.hash.slice(1);
+            setActive(clickedId);
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(() => {
+                const release = () => {
+                    clickedId = null;
+                    update();
+                };
+                ['wheel', 'touchmove', 'keydown'].forEach(type =>
+                    window.addEventListener(type, release, { once: true, passive: true }));
+            }, 600); // smooth jumps finish well within this time
+        });
+    });
 
     // requestAnimationFrame keeps the work to at most once per frame while scrolling.
     window.addEventListener('scroll', () => {
