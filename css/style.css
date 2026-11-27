@@ -293,6 +293,11 @@ h2 {
     font-weight: 600;
 }
 
+/* Links inside the fact sheet (e.g. team members) */
+.project-facts dd a {
+    color: var(--accent-color);
+}
+
 .project-links {
     display: flex;
     flex-wrap: wrap;

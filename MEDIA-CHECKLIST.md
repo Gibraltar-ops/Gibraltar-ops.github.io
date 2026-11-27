@@ -31,7 +31,7 @@ Alla bilder behöver en **alt-text** som beskriver vad bilden visar (skrivs i si
 - [ ] `blog/stupidly-stable/class-ownership.svg` – diagram över server-only, ägande klient och replikerade klasser.
 - [ ] Mätdata från profilerna A–F (CSV) till Results.
 
-## Card Caboose (ny projektsida, Unreal Engine 5.7, C++)
+## Card Caboose (Unreal Engine 5.7, C++) – `projects/cardcaboose.md`
 
 - [ ] `cardcaboose_thumb.webp` – muppar runt bordet i tågkupén.
 - [ ] `cardcaboose_gameplay.webp` – ett spelat kort som flyger till center pile, sett ur förstapersonsvy.
@@ -39,7 +39,7 @@ Alla bilder behöver en **alt-text** som beskriver vad bilden visar (skrivs i si
 - [ ] `cardcaboose_voip.webp` – muppens mun/ögon som rör sig när någon pratar (proxy-trafik).
 - [ ] Kod (C++): replikering av handen med `COND_OwnerOnly` (`GetLifetimeReplicatedProps`).
 - [ ] Kod (C++): `Server_PlayCards` – servern slår upp kort från instans-ID:n och avvisar mjukt med `Client_ActionRejected`.
-- [ ] Fakta: projekttyp, teamstorlek och sammansättning, tidsåtgång, plattform (Steam?), GitHub-länk.
+- [x] Fakta (klart).
 
 ## Lastkaj 0 (Unreal Engine 5, C++ / Blueprints)
 
