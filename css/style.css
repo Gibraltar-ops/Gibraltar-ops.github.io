@@ -479,6 +479,7 @@ a.logo {
     padding: 1rem 1.25rem;
     overflow-x: auto;
     margin-bottom: 1.5rem;
+    font-size: 0.9rem; /* line-height is based on this, keeps code lines tight */
     line-height: 1.5;
 }
 
