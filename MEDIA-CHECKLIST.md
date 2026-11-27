@@ -69,17 +69,17 @@ Alla bilder behöver en **alt-text** som beskriver vad bilden visar (skrivs i si
 - [ ] Kod (C#): hur sonarpulsen sprids och detekterar material.
 - [ ] Fakta: projekttyp, tidsåtgång.
 
-## Sokoban (ny projektsida)
+## DungeonRunner – Sokoban-spelet (SDL3, C++) – `projects/dungeonrunner.md`
 
-- [ ] `sokoban_thumb.webp`
-- [ ] `sokoban_gameplay.webp` – spelaren som knuffar lådor på plats.
+- [ ] `dungeonrunner_thumb.webp`
+- [ ] `dungeonrunner_gameplay.webp` – spelaren som knuffar lådor på plats.
 - [ ] Kod: flytt- och knufflogiken, eller ett ångra-system om det finns.
-- [ ] Fakta: motor/ramverk, språk, roll, projekttyp, teamstorlek, tidsåtgång, plattform.
+- [ ] Fakta: roll, projekttyp, teamstorlek, tidsåtgång, plattform.
 
-## VR-projektet (ny projektsida, HLSL)
+## BLOONVR (HLSL) – `projects/bloonvr.md`
 
-- [ ] `vr_thumb.webp`
-- [ ] `vr_gameplay.mp4` – höjdkänslan och molnen. Spela in från en stabiliserad spectator-kamera; huvudrörelser från headsetet kan ge åksjuka i video.
-- [ ] `vr_clouds_before_after.webp` – samma vy med och utan dina moln/effekter.
+- [ ] `bloonvr_thumb.webp`
+- [ ] `bloonvr_gameplay.mp4` – höjdkänslan och molnen. Spela in från en stabiliserad spectator-kamera; huvudrörelser från headsetet kan ge åksjuka i video.
+- [ ] `bloonvr_clouds_before_after.webp` – samma vy med och utan dina moln/effekter.
 - [ ] Kod (HLSL): kärnan i molnshadern (t.ex. brus eller raymarching), 20–40 rader.
-- [ ] Fakta: projektnamn, motor, roll, projekttyp, teamstorlek, tidsåtgång, headset/plattform.
+- [ ] Fakta: motor, roll, projekttyp, teamstorlek, tidsåtgång, headset/plattform.

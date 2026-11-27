@@ -6,10 +6,9 @@ engine: Unity
 languages: C#
 team: "Solo"
 platform: "Mobile, PC"
-# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
-# project_type: "Solo project"                     # School project / Game jam / Solo project / Released
-# duration: "8 weeks, spring 2025"
-# github_url: https://github.com/Gibraltar-ops/...
+project_type: "Solo project"
+duration: "8 weeks, spring 2025"
+github_url: https://github.com/Gibraltar-ops/Crypt
 itch_url: https://gibraltarops.itch.io/ping
 media: /images/ping_gameplay.webp
 media_alt: Ping echo-location horror gameplay

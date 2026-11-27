@@ -4,12 +4,11 @@ title: Tyrant
 role: Gameplay Programmer
 engine: Unity
 languages: C#
-# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
-# project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
-# team: "6 people: 3 programmers, 2 artists, 1 designer"
-# duration: "4 weeks, autumn 2024"
-# platform: "PC (Windows)"
-# github_url: https://github.com/Gibraltar-ops/...
+project_type: "School project (Yrgo)"
+team: "3 programmers, 4 artists"
+duration: "8 weeks, autumn 2024"
+platform: "PC (Windows)"
+github_url: https://github.com/Gibraltar-ops/Tyrant-Project
 itch_url: https://yrgo.itch.io/tyrant
 media: /images/tyrant_gameplay.webp
 media_alt: Tyrant tentacle physics gameplay

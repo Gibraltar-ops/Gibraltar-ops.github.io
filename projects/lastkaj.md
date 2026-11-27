@@ -1,15 +1,13 @@
 ---
 layout: project
 title: Lastkaj 0
-role: Gameplay Programmer/Designer
+role: Creative Lead/Gameplay Programmer/Designer/ SFX/VFX / UX/UI
 engine: Unreal Engine 5
 languages: C++ / Visual Scripting
-# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
-# project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
-# team: "8 people: 4 programmers, 3 artists, 1 designer"
-# duration: "8 weeks, spring 2025"
-# platform: "PC (Windows)"
-# github_url: https://github.com/Gibraltar-ops/...
+project_type: "School project (Yrgo)" 
+team: "3 programmers, 4 artists"
+duration: "8 weeks, spring 2025"
+platform: "PC (Windows)"
 itch_url: https://yrgo.itch.io/lastkaj-0
 media: /images/lastkaj_gameplay.webp
 media_alt: Lastkaj 0 gameplay preview
