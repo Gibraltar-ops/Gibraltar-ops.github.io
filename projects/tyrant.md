@@ -4,6 +4,12 @@ title: Tyrant
 role: Gameplay Programmer
 engine: Unity
 languages: C#
+# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
+# project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
+# team: "6 people: 3 programmers, 2 artists, 1 designer"
+# duration: "4 weeks, autumn 2024"
+# platform: "PC (Windows)"
+# github_url: https://github.com/Gibraltar-ops/...
 itch_url: https://yrgo.itch.io/tyrant
 media: /images/tyrant_gameplay.webp
 media_alt: Tyrant tentacle physics gameplay
@@ -22,3 +28,19 @@ A 2D apocalyptic clicker game featuring a tentacled creature with physics-simula
 - Developed the `TyrantController` and `EatManager` scripts to handle core gameplay logic and entity consumption.
 - Implemented procedural line renderers operating in World Space to drive the physics-based tentacle sprawl mechanic.
 - Optimized code components to ensure stable frame rates despite complex physical simulations and scaling entity counts.
+
+<!-- TODO: sections to fill in, then remove the comment markers around them.
+     (HTML comments are hidden on the page but visible in the page source.)
+
+## Code
+
+A short description of what the snippet does and why it is interesting.
+
+```csharp
+// 10-30 lines of your own code, the most interesting part
+```
+
+## What I learned
+
+One or two sentences: what you would do differently next time.
+-->

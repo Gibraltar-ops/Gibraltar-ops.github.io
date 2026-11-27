@@ -41,3 +41,4 @@ exclude:
   - "*.sln"
   - .idea
   - README.md
+  - MEDIA-CHECKLIST.md

@@ -4,6 +4,12 @@ title: Lastkaj 0
 role: Gameplay Programmer/Designer
 engine: Unreal Engine 5
 languages: C++ / Visual Scripting
+# --- Fact sheet: remove the "#" in front of a line when you fill it in ---
+# project_type: "School project (Yrgo)"            # School project / Game jam / Solo project / Released
+# team: "8 people: 4 programmers, 3 artists, 1 designer"
+# duration: "8 weeks, spring 2025"
+# platform: "PC (Windows)"
+# github_url: https://github.com/Gibraltar-ops/...
 itch_url: https://yrgo.itch.io/lastkaj-0
 media: /images/lastkaj_gameplay.webp
 media_alt: Lastkaj 0 gameplay preview
@@ -35,3 +41,19 @@ Although it ultimately didn't make the final vertical slice release, I spent sig
 I collaborated with the teams graphical artists to create a moving background the main menu instead of a static picture. Here, I coded a water shader creating procedural waves in Unreals visual scripting language Blueprints. The results were very satisfying!
 
 <!-- Här vill jag ha in en gif på vattnet-->
+
+<!-- TODO: sections to fill in, then remove the comment markers around them.
+     (HTML comments are hidden on the page but visible in the page source.)
+
+## Code
+
+A short description of what the snippet does and why it is interesting.
+
+```cpp
+// 10-30 lines of your own code, the most interesting part
+```
+
+## What I learned
+
+One or two sentences: what you would do differently next time.
+-->

@@ -10,11 +10,22 @@ layout: default
         <p class="project-role">{{ page.role }}</p>
     </div>
 
-    <!-- Skills / Tech Stack -->
+    <!-- Fact sheet: what a recruiter scans first. Each row only shows if the field is set in front matter. -->
     <div class="project-meta">
-        {% if page.engine %}<p><strong>Engine:</strong> {{ page.engine }}</p>{% endif %}
-        {% if page.languages %}<p><strong>Languages:</strong> {{ page.languages }}</p>{% endif %}
-        {% if page.itch_url %}<p><a href="{{ page.itch_url }}" target="_blank" rel="noopener" class="itch-btn">Play on Itch.io ↗</a></p>{% endif %}
+        <dl class="project-facts">
+            {% if page.project_type %}<div><dt>Type</dt><dd>{{ page.project_type }}</dd></div>{% endif %}
+            {% if page.team %}<div><dt>Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
+            {% if page.duration %}<div><dt>Duration</dt><dd>{{ page.duration }}</dd></div>{% endif %}
+            {% if page.platform %}<div><dt>Platform</dt><dd>{{ page.platform }}</dd></div>{% endif %}
+            {% if page.engine %}<div><dt>Engine</dt><dd>{{ page.engine }}</dd></div>{% endif %}
+            {% if page.languages %}<div><dt>Languages</dt><dd>{{ page.languages }}</dd></div>{% endif %}
+        </dl>
+        {% if page.itch_url or page.github_url %}
+        <div class="project-links">
+            {% if page.itch_url %}<a href="{{ page.itch_url }}" target="_blank" rel="noopener" class="itch-btn">Play on Itch.io ↗</a>{% endif %}
+            {% if page.github_url %}<a href="{{ page.github_url }}" target="_blank" rel="noopener" class="github-btn">View code on GitHub ↗</a>{% endif %}
+        </div>
+        {% endif %}
     </div>
 
     <!-- Gif (WebP) -->
