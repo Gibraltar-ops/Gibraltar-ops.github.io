@@ -69,6 +69,11 @@ To sync state and trigger actions across machines, Unreal relies on two primary 
 * Remote Procedure Calls (RPCs): Functions invoked on one machine and executed on another. Server RPCs travel from an owning client to the server, here used for player intent such as playing a card or an item, and client RPCs travel from the server to a specific owning client, such as rejecting an invalid move. NetMulticast RPCs broadcast from the server to all connected clients. RPCs are marked either Reliable or Unreliable. Reliable RPCs are guaranteed to arrive and execute in strict FIFO order per actor channel. However, if a packet is dropped, queueing RPCs on that actor must wait for retransmission. This is kinda like standing in line to get served at the bank. On the other hand, Unreliable RPCs are fire-and-forget. Dropped packets are never resent across the network, and the system ties together those packets that actually arrive, making them useful for continuous visual updates.   
 * Property Replication and RepNotify: Variables marked with Replicated or ReplicatedUsing are automatically synced from the server to clients. Unlike Reliable RPCs, property replication is eventually consistent. If a variable changes three times during a burst of packet loss, intermediate values may be skipped and only the latest value is guaranteed to converge. Replication can also be filtered per connection using various conditions. 
 
+<figure>
+  <img src="/images/RPCstyle.svg" alt="Diagram comparing how packets flow through Reliable RPCs, Unreliable RPCs and State Replication">
+  <figcaption>Packet flow through Reliable, Unreliable RPCs and State Replication</figcaption>
+</figure>
+
 Critically, Unreal provides no cross-actor guarantee for ordering during property replication. If the server changes the game state as well as the player state in the exact same frame, those updates may arrive on a client in separate packets and in arbitrary order. 
 
 ## Evaluating Alternative Multiplayer Architectures
