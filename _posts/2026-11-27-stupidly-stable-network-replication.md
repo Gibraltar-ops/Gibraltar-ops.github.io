@@ -14,6 +14,10 @@ When developing a multiplayer-focused game, network architecture is rarely a one
 
 On paper, this makes turn-based networking sound trivial. In practice, introducing hidden information, player social presence and unstable client connections often turns a simple tabletop ruleset into a complicated and fragile system problem. 
 
+<figure>
+  <video src="/images/blog_playingcard.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Gameplay from Card Caboose: a hand muppet playing a card at the table in the train cabin"></video>
+</figure>
+
 Card Caboose, implemented in Unreal Engine 5.7 with the C++ module, is a 2-4 player first-person multiplayer card game developed as a student team project. The players sit around a virtual table in a train cabin as hand muppets and compete over multiple rounds using a golf-style scoring system, where the lowest score wins, separated by an interlude shop featuring drafting and live auctions. So rather than relying on a dedicated backend structure, the game runs on a listen server topology over Steam. This means one player's computer acts simultaneously as an authoritative server and a local client at the same time. Players host and join sessions using a four-character room code and move between the lobby and the game level via seamless travel, Unreal Engine's mechanism for transitioning between levels without disconnecting active network clients. 
 
 <figure>
